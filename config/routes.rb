@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'books/new'
-  post 'books' => 'books/#create'
-  get 'books/index'
+  get '/books' => 'books#new'
+  post '/books' => 'books#create'
+  #get '/books' => 'books#index' （コントローラにまとめて定義できるので不要？！）
   get 'books/show'
   get 'books/edit'
-  get 'homes/top'
+  get '/' => 'homes#top'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
